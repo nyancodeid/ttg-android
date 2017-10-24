@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.ttg.apps"
+    versionCode = "1"
+    version     = "1.0.0" >
+
+  <name>TextToGaul</name>
+
+  <description>
+      Something App that make you feeling something
+  </description>
+
+  <author href="https://facebook.com/ryan.hac" email="ryandevstudio@gmail.com">
+      Ryan Aunur Rassyid
+  </author>
+  
+  <preference name="permissions" value="none"/>
+
+  <!-- Plugins -->
+  <plugin name="cordova-plugin-speechrecognition" source="npm" />
+
+
+  <access origin="*"/>
+
+
+  <platform name="android">
+      <preference name="android-minSdkVersion" value="18" /> <!-- Jelly Bean -->
+
+     
+  </platform>
+
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+
+
+</widget>
