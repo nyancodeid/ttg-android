@@ -12,6 +12,8 @@
 		
 	</head>
 	<body onload="onLoad()">
+		<button onclick="doListen()">Listen to Me</button>
+
 		<div id="hasil"></div>
 
 	
@@ -21,7 +23,30 @@
 		<!-- Path to your app js-->
 		<script>
 			function onLoad() {
-				
+				document.addEventListener('deviceready', function() {
+					window.plugins.speechRecognition.isRecognitionAvailable(function() {
+						alert("Speech ready");
+					});
+					window.plugins.speechRecognition.hasPermission(function() {
+						alert("You have permission using speech");
+					}, function() {
+						alert("You dont have permission");
+					})
+				});
+			}
+			function doListen() {
+				var options = {
+					language: 'id-ID'
+				};
+				window.plugins.speechRecognition.startListening(function(word) {
+					if (typeof word == "object") {
+						document.getElementById('hasil').innerHTML = word.join(" ");
+					} else {
+						document.getElementById('hasil').innerHTML = word;
+					}
+				}, function() {
+					alert("Error while listen in you");
+				}, options);
 			}
 		</script>
 	</body>
