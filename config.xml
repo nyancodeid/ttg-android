@@ -18,7 +18,7 @@
   <preference name="permissions" value="none"/>
 
   <!-- Plugins -->
-  <plugin name="cordova-plugin-speechrecognition" source="npm" />
+  <plugin name="cordova-plugin-speechrecognition" spec="1.1.2" />
 
 
   <access origin="*"/>

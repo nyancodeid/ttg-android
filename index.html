@@ -40,7 +40,7 @@
 				};
 				window.plugins.speechRecognition.startListening(function(word) {
 					if (typeof word == "object") {
-						document.getElementById('hasil').innerHTML = word.join(" ");
+						document.getElementById('hasil').innerHTML = word.join("@");
 					} else {
 						document.getElementById('hasil').innerHTML = word;
 					}
